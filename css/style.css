@@ -1,0 +1,144 @@
+html {
+    text-align: center;
+    font-family: monospace;
+}
+body { 
+    margin: 0; 
+    padding: 0; 
+}
+
+
+.calculator {
+    font-size: 40px;
+    height: 535px;
+    width: 430px;
+    background: DarkGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "screen screen screen screen" 
+    "clear backspace pm divide" 
+    "seven eight nine times"
+    "four five six minus"
+    "one two three plus"
+    "zero zero decimal equals";
+    gap: 3px;
+    padding: 3px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: rgb(169, 230, 219);
+}
+
+.screen {
+    grid-area: screen;
+    background: white;
+}
+
+#calcElement {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+[value = "="] {
+    grid-area: equals;
+    background: white;
+}
+
+[value = "+"] {
+    grid-area: plus;
+    background: white;
+}
+
+[value = "-"] {
+    grid-area: minus;
+    background: white;
+}
+
+[value = "*"] {
+    grid-area: times;
+    background: white;
+}
+
+[value = "/"] {
+    grid-area: divide;
+    background: white;
+}
+
+[value = "pm"] {
+    grid-area: pm;
+    background: white;
+}
+
+[value = "backspace"] {
+    grid-area: backspace;
+    background: white;
+}
+
+[value = "clear"] {
+    grid-area: clear;
+    background: white;
+}
+
+[value = "decimal"] {
+    grid-area: decimal;
+    background: white;
+}
+
+[value = "0"] {
+    grid-area: zero;
+    background: white;
+}
+
+[value = "1"] {
+    grid-area: one;
+    background: white;
+}
+
+[value = "2"] {
+    grid-area: two;
+    background: white;
+}
+
+[value = "3"] {
+    grid-area: three;
+    background: white;
+}
+
+[value = "4"] {
+    grid-area: four;
+    background: white;
+}
+
+[value = "5"] {
+    grid-area: five;
+    background: white;
+}
+
+[value = "6"] {
+    grid-area: six;
+    background: white;
+}
+
+[value = "7"] {
+    grid-area: seven;
+    background: white;
+}
+
+[value = "8"] {
+    grid-area: eight;
+    background: white;
+}
+
+[value = "9"] {
+    grid-area: nine;
+    background: white;
+}
