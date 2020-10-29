@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <div id="calcElement" class="screen" value="screen">Display</div>
-            <div id="calcElement" value="decimal">.</div>
+            <div id="calcElement" class="screen" value="screen"></div>
+            <div id="calcElement" class="operand" value="decimal">.</div>
             <div id="calcElement" class="operand" value="1">1</div>
             <div id="calcElement" class="operand" value="2">2</div>
             <div id="calcElement" class="operand" value="3">3</div>
@@ -23,14 +23,14 @@
             <div id="calcElement" class="operand" value="8">8</div>
             <div id="calcElement" class="operand" value="9">9</div>
             <div id="calcElement" class="operand" value="0">0</div>
-            <div id="calcElement" value="clear">AC</div>
-            <div id="calcElement" value="backspace">C</div>
-            <div id="calcElement" value="pm">+/-</div>
-            <div id="calcElement" class="operator" value="/">/</div>
-            <div id="calcElement" class="operator" value="*">*</div>
-            <div id="calcElement" class="operator" value="-">-</div>
-            <div id="calcElement" class="operator" value="+">+</div>
-            <div id="calcElement" value="=">=</div>
+            <div id="calcElement" class="operand" value="clear">AC</div>
+            <div id="calcElement" class="operand" value="backspace">C</div>
+            <div id="calcElement" class="operand" value="pm">+/-</div>
+            <div id="calcElement" class="operator" data-val="divide" value="/">/</div>
+            <div id="calcElement" class="operator" data-val="multiply" value="*">*</div>
+            <div id="calcElement" class="operator" data-val="subtract" value="-">-</div>
+            <div id="calcElement" class="operator" data-val="add" value="+">+</div>
+            <div id="calcElement" class="operator" data-val="equals" value="=">=</div>
         </div>
     </div>
     <script src="js/calculator.js"></script>

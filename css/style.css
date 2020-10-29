@@ -7,11 +7,18 @@ body {
     padding: 0; 
 }
 
+@media (max-width: 550px) { 
+    .calculator {
+        height: 99vh !important;
+        width: 100vh !important;
+        font-size: 30px;
+    }
+}
 
 .calculator {
     font-size: 40px;
     height: 535px;
-    width: 430px;
+    width: 420px;
     background: DarkGray;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -40,12 +47,13 @@ body {
 .screen {
     grid-area: screen;
     background: white;
+    justify-content: flex-end !important;
 }
 
 #calcElement {
     display: flex;
-    justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
+    justify-content: center; 
+    align-items: center; 
 }
 
 [value = "="] {
