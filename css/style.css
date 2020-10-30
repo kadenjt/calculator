@@ -16,10 +16,12 @@ body {
 }
 
 .calculator {
+    border-radius: 6px;
+    border-color: black;
     font-size: 40px;
     height: 535px;
     width: 420px;
-    background: DarkGray;
+    background: rgb(36, 34, 34);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -31,7 +33,7 @@ body {
     "one two three plus"
     "zero zero decimal equals";
     gap: 3px;
-    padding: 3px;
+    padding: 4px;
 }
 
 .container {
@@ -41,112 +43,128 @@ body {
     align-content: center;
     align-items: center;
     overflow: hidden;
-    background: rgb(169, 230, 219);
+    background: rgba(169, 230, 219, 0.5);
 }
 
 .screen {
+    font-size: 50px;
     grid-area: screen;
-    background: white;
+    background: rgb(189, 196, 194);
     justify-content: flex-end !important;
+    text-shadow: 1.3px 1.3px #383838;
+    margin-bottom: 3px;
+    margin-top: 2px;
 }
 
 #calcElement {
     display: flex;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    border-radius: 10px;
 }
 
 [value = "="] {
     grid-area: equals;
-    background: white;
 }
 
 [value = "+"] {
     grid-area: plus;
-    background: white;
 }
 
 [value = "-"] {
     grid-area: minus;
-    background: white;
 }
 
 [value = "*"] {
     grid-area: times;
-    background: white;
 }
 
 [value = "/"] {
     grid-area: divide;
-    background: white;
 }
 
 [value = "pm"] {
     grid-area: pm;
-    background: white;
+    background: rgba(93, 206, 172, 1);
 }
 
 [value = "backspace"] {
     grid-area: backspace;
-    background: white;
+    background: rgba(93, 206, 172, 1);;
 }
 
 [value = "clear"] {
     grid-area: clear;
-    background: white;
+    background: rgba(93, 206, 172, 1);;
 }
 
 [value = "decimal"] {
     grid-area: decimal;
-    background: white;
 }
 
 [value = "0"] {
     grid-area: zero;
-    background: white;
 }
 
 [value = "1"] {
     grid-area: one;
-    background: white;
 }
 
 [value = "2"] {
     grid-area: two;
-    background: white;
 }
 
 [value = "3"] {
     grid-area: three;
-    background: white;
 }
 
 [value = "4"] {
     grid-area: four;
-    background: white;
 }
 
 [value = "5"] {
     grid-area: five;
-    background: white;
 }
 
 [value = "6"] {
     grid-area: six;
-    background: white;
 }
 
 [value = "7"] {
     grid-area: seven;
-    background: white;
 }
 
 [value = "8"] {
     grid-area: eight;
-    background: white;
 }
 
 [value = "9"] {
     grid-area: nine;
-    background: white;
 }
+
+[data-type = "num"] {
+    background: rgba(13, 212, 73, 0.952); 
+}
+
+.operator {
+    background: rgb(58, 165, 228);
+}
+
+.operand:hover {
+    opacity: 0.8;
+}
+.operator:hover {
+    opacity: 0.8;
+}
+
+.operator:active {
+    transform: scale(0.96);
+    transition: transform 0.04s;
+}
+
+.operand:active {
+    transform: scale(0.96);
+    transition: transform 0.04s;
+}
+
+

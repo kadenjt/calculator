@@ -31,43 +31,19 @@ function updateScreen(e) {
         if (currScreen.length > 0) display.textContent = currScreen.slice(0, -1);
     }
     else if (input == "+/-") display.textContent = -currDisplay;
+    else if (input == ".") {
+        if (display.textContent.toString().indexOf(".") <0) display.textContent += input;
+    }
     else display.textContent += input;
     currDisplay = Number(display.textContent);
     if (isNaN(currDisplay)) currDisplay = "";
     pressedOperand = false;
 }
 
-function add(a, b) {
-    prevDisplay = b;
-    return Number(a) + Number(b);
-}
-
-function subtract(a, b) {
-    prevDisplay = b;
-    return Number(a) - Number(b);
-}
-
-function multiply(a, b) {
-    prevDisplay = b;
-    return Number(a) * Number(b);
-}
-
-function divide(a, b) {
-    prevDisplay = b;
-    return Number(a) / Number(b);
-}
-
 function operate(e) {
     const operation = e.target.dataset.val;
     switch (prevOperand) {
-        // case "add":
-        //     if (!(typeof prevDisplay == "number")) prevDisplay = 0;
-        //     display.textContent = add(prevDisplay, currDisplay);
-        //     //currDisplay = Number(display.textContent);
-        //     //currDisplay = 0;
-        //     break;
         case "add":
-            //console.log("add "+currDisplay+ " "+prevDisplay)
             currDisplay = Number(display.textContent);
             currDisplay += Number(prevDisplay);
             display.textContent = currDisplay;
@@ -90,6 +66,10 @@ function operate(e) {
             break;
         case "divide":
             currDisplay = Number(display.textContent);
+            if (currDisplay == 0) {
+                alert("Never divide by zero!")
+                break;
+            }
             currDisplay = Number(prevDisplay)/currDisplay;
             display.textContent = currDisplay;
             prevDisplay = currDisplay;
@@ -97,12 +77,14 @@ function operate(e) {
             break;
         case "equals":
             display.textContent = currDisplay;
-            prevDisplay = currDisplay;
+            prevDisplay = Number(display.textContent);
             prevOperand = "";
             break;
         default:
             prevOperand = operation;
+            currDisplay = Number(display.textContent);
             prevDisplay = currDisplay;
     }
+    console.log(prevOperand)
     pressedOperand = true;
 }
