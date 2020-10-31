@@ -1,4 +1,5 @@
 let currDisplay, prevDisplay, pressedOperand, prevOperand;
+createNumButtons()
 
 const operands = Array.from(document.getElementsByClassName("operand"));
 const operators = Array.from(document.getElementsByClassName("operator"));
@@ -6,6 +7,19 @@ const display = document.querySelector("[value='screen']");
 
 operands.forEach(key => key.addEventListener("click", updateScreen))
 operators.forEach(key => key.addEventListener("click", operate))
+
+function createNumButtons() {
+    const calc = document.getElementById("calculator")
+    for(let i=0; i<10;i++) {
+        var num = document.createElement('div');
+        num.className = "operand";
+        num.id="calcElement";
+        num.setAttribute("data-type", "num")
+        num.innerText = i;
+        num.setAttribute("value", i)
+        calc.appendChild(num);
+    }
+}
 
 initValues();
 

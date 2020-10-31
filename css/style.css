@@ -1,9 +1,6 @@
-html {
+html, body {
     text-align: center;
     font-family: monospace;
-}
-
-body {
     margin: 0;
     padding: 0;
 }
@@ -145,24 +142,14 @@ body {
 
 .operator {
     background: rgb(58, 165, 228);
-    cursor: pointer;
 }
 
-.operand:hover {
+.operand:hover, .operator:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 
-.operator:hover {
-    opacity: 0.8;
-}
-
-.operator:active {
-    transform: scale(0.96);
-    transition: transform 0.04s;
-}
-
-.operand:active {
+.operator:active, .operand:active {
     transform: scale(0.96);
     transition: transform 0.04s;
 }
