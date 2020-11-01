@@ -5,4 +5,4 @@
 
 **LIVE LINK:** https://www.kadenthielmann.com/calculator/
 
-![Screenshot of the project](/assets/screenshot.png width="435" height="550")
+![Screenshot of the project](/assets/screenshot.png =435x)
